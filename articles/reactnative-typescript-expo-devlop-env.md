@@ -6,4 +6,4 @@ topics: []
 published: false
 ---
 
-タイトル通りです。
+タイトル通りです。React Native,Expo,TypeScript を用いた開発環境の構築をしたいと思います。
