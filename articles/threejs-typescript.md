@@ -6,4 +6,4 @@ topics: []
 published: false
 ---
 
-three.js を TypeScript で使うための環境構築です
+three.js を TypeScript で使うための環境構築です。なかなか調べても出てこなかったので。書いてみます。
