@@ -24,3 +24,5 @@ yarn
 
 Choose a template: › blank (TypeScript) same as blank but with TypeScript configuration
 を選択
+
+Xcode のシュミレータ
