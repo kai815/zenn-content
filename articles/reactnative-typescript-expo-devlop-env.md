@@ -25,4 +25,7 @@ yarn
 Choose a template: › blank (TypeScript) same as blank but with TypeScript configuration
 を選択
 
-Xcode のシュミレータ
+Xcode のインストール
+https://docs.expo.io/workflow/ios-simulator/?redirected
+
+`Error: EMFILE: too many open files, watch at FSEvent.FSWatcher.\_handle.onchange (internal/fs/watchers.js:178:28)`
