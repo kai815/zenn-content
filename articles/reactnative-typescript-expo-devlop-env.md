@@ -35,29 +35,11 @@ https://stackoverflow.com/questions/58675179/error-emfile-too-many-open-files-re
 
 `brew update`
 
-You have 4 outdated formulae installed.
-You can upgrade them with brew upgrade
-or list them with brew outdated.
+`brew install watchman`
 
-`brew upgrade`
-の結果
+brew install watchman
+Error: python@3.9: the bottle needs the Apple Command Line Tools to be installed.
+You can install them, if desired, with:
+xcode-select --install
 
-==> nodebrew
-You need to manually run setup_dirs to create directories required by nodebrew:
-/usr/local/opt/nodebrew/bin/nodebrew setup_dirs
-
-Add path:
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-To use Homebrew's directories rather than ~/.nodebrew add to your profile:
-export NODEBREW_ROOT=/usr/local/var/nodebrew
-
-zsh completions have been installed to:
-/usr/local/share/zsh/site-functions
-==> git
-The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.
-
-zsh completions and functions have been installed to:
-/usr/local/share/zsh/site-functions
-
-とエラーが出る
+`xcode-select --install`
