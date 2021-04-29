@@ -55,3 +55,5 @@ xcode-select --install
 をしてから
 
 `brew install watchman` をする
+
+これでエミュレータが動くようになる。
