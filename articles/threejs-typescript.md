@@ -8,7 +8,10 @@ published: false
 
 three.js を TypeScript で使うための環境構築です。なかなか調べても出てこなかったので。書いてみます。
 
-three.js
+思ったよりは手間は少ないかもです。
+
+three.js のドキュメント
+かっこいいサイトもいっぱいあります。
 
 https://threejs.org/
 
