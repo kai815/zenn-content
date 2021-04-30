@@ -11,49 +11,72 @@ published: false
 expo のインストール
 
 npm の場合
-`npm install -g expo-cli`
+
+```
+$ npm install -g expo-cli
+```
 
 yarn の場合
-`yarn global add expo-cli`
+
+```
+$ yarn global add expo-cli
+```
 
 インストールされたかの確認のためにバージョンチェク
-`expo --version`
+
+```
+$ expo --version
+```
 
 プロジェクトの作成
-`expo init project-name`
+
+```
+$ expo init project-name
+```
+
+画像
 
 Choose a template: › blank (TypeScript) same as blank but with TypeScript configuration
 を選択
 
 template の違いは
 
-Xcode のインストール
-https://docs.expo.io/workflow/ios-simulator/?redirected
+[Xcode のインストールの参考](https://docs.expo.io/workflow/ios-simulator/?redirected)
 
-`expo start`
+```
+$ expo start
+```
 
 ios のシュミレータを使おうとすると下記のようなエラーが出る場合
 
 `Error: EMFILE: too many open files, watch at FSEvent.FSWatcher.\_handle.onchange (internal/fs/watchers.js:178:28)`
 
-参考
-https://stackoverflow.com/questions/58675179/error-emfile-too-many-open-files-react-native-cli
+[エラー対処の参考](https://stackoverflow.com/questions/58675179/error-emfile-too-many-open-files-react-native-cli)
 
-`brew update`
+```
+$ brew update
+```
 
-`brew install watchman`
+```
+$ brew install watchman
+```
 
 インストールしようとすると下記のようなエラーに当たる場合は、
 
-brew install watchman
-Error: python@3.9: the bottle needs the Apple Command Line Tools to be installed.
-You can install them, if desired, with:
-xcode-select --install
+`Error: python@3.9: the bottle needs the Apple Command Line Tools to be installed. You can install them, if desired, with: xcode-select --install`
 
-`xcode-select --install`
+```
+$ xcode-select --install
+```
 
 をしてから
 
-`brew install watchman` をする
+```
+$ brew install watchman
+```
+
+をする
 
 これでエミュレータが動くようになる。
+
+eslint の導入
