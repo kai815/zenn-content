@@ -34,7 +34,18 @@ $ expo --version
 $ expo init project-name
 ```
 
-画像
+下記のような選択画面
+
+```
+? Choose a template: › - Use arrow-keys. Return to submit.
+    ----- Managed workflow -----
+    blank                 a minimal app as clean as an empty canvas
+❯   blank (TypeScript)    same as blank but with TypeScript configuration
+    tabs (TypeScript)     several example screens and tabs using react-navigation and TypeScript
+    ----- Bare workflow -----
+    minimal               bare and minimal, just the essentials to get you started
+    minimal (TypeScript)  same as minimal but with TypeScript configuration
+```
 
 Choose a template: › blank (TypeScript) same as blank but with TypeScript configuration
 を選択
