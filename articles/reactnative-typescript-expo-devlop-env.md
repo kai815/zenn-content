@@ -2,7 +2,7 @@
 title: " React Native,Expo,TypeScriptの開発環境構築"
 emoji: "😊"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["ReactNative", "TypeScript", "Expo"]
+topics: ["ReactNative", "TypeScript", "Expo", "ESLint"]
 published: false
 ---
 
@@ -173,3 +173,6 @@ TypeScript を使うか聞かれているので、`Yes`にします。
 
 Config ファイルの形式を聞かれています。
 今回は`JavaScript` を選択します。
+
+以上です。
+この記事が皆様のお役に立てれば嬉しいです。
