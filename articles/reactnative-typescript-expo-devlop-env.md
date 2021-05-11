@@ -50,13 +50,23 @@ $ expo init project-name
 Choose a template: › blank (TypeScript) same as blank but with TypeScript configuration
 を選択
 
-template の違いは
+`Managed workflow`と`Bare workflow`の違いは簡単にいうと、
+`Managed workflow`→Expo のサポート下で開発できる
+`Bare workflow`→Expo なしでの開発に近く、カスタマイズ性は上がるが難易度が高い
+という違いのようです。
 
-[Xcode のインストールの参考](https://docs.expo.io/workflow/ios-simulator/?redirected)
+`blank`と`tabs`の違いは初めにいくつか画面が作られているかどうかです。
+
+```
+$ cd project-name
+```
 
 ```
 $ expo start
 ```
+
+ios のシュミレータを使うには Xcode が必要なので、下記を参考にインストールする。
+[Xcode のインストールの参考](https://docs.expo.io/workflow/ios-simulator/?redirected)
 
 ## ios のシュミレータを使おうとすると下記のようなエラーが出る場合
 
