@@ -66,7 +66,10 @@ $ expo start
 ```
 
 ios のシュミレータを使うには Xcode が必要なので、下記を参考にインストールする。
-[Xcode のインストールの参考](https://docs.expo.io/workflow/ios-simulator/?redirected)
+[Xcode のインストールの参考](https://docs.expo.io/workflow/ios-simulator/)
+
+android のエミュレータを使うには Android Studio Emulator をインストール
+[Android Studio Emulator のインストールの参考](https://docs.expo.io/workflow/android-studio-emulator/)
 
 ## ios のシュミレータを使おうとすると下記のようなエラーが出る場合
 
