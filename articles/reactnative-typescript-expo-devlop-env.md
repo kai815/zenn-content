@@ -1,14 +1,20 @@
 ---
 title: " React Native,Expo,TypeScriptの開発環境構築"
-emoji: "😊"
+emoji: "🎥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["ReactNative", "TypeScript", "Expo", "ESLint"]
 published: false
 ---
 
-タイトル通りです。React Native,Expo,TypeScript を用いた開発環境の構築をしたいと思います。
+タイトル通りですが、React Native,Expo,TypeScript を用いた開発環境の構築をしていきます。
+スマホアプリの開発もやってみたいということで、ReactNative を学び始めたので、
+そのメモ的に書きます。
 
-## expo のインストール
+## Expo のインストールからアプリの起動まで
+
+[Expo のドキュメント](https://expo.io/)
+
+Expo をインストールします。
 
 npm の場合
 
@@ -34,7 +40,9 @@ $ expo --version
 $ expo init project-name
 ```
 
-下記のような選択画面
+※`project-name`のところは任意の名前です。
+
+下記のような選択画面になるので、
 
 ```
 ? Choose a template: › - Use arrow-keys. Return to submit.
@@ -47,8 +55,8 @@ $ expo init project-name
     minimal (TypeScript)  same as minimal but with TypeScript configuration
 ```
 
-Choose a template: › blank (TypeScript) same as blank but with TypeScript configuration
-を選択
+`blank (TypeScript) same as blank but with TypeScript configuration`
+を選択します。
 
 `Managed workflow`と`Bare workflow`の違いは簡単にいうと、
 `Managed workflow`→Expo のサポート下で開発できる
@@ -56,6 +64,8 @@ Choose a template: › blank (TypeScript) same as blank but with TypeScript conf
 という違いのようです。
 
 `blank`と`tabs`の違いは初めにいくつか画面が作られているかどうかです。
+
+作られたプロジェクトのディレクトリに移動
 
 ```
 $ cd project-name
@@ -65,17 +75,26 @@ $ cd project-name
 $ expo start
 ```
 
-ios のシュミレータを使うには Xcode が必要なので、下記を参考にインストールする。
+スタートすると以下のような画面になれば OK です。
+![](https://storage.googleapis.com/zenn-user-upload/sw46nhvcikwgmvjzshbtytu9ozxw)
+
+左の`Run on iOS simulator`、`Run on Android device/emulator`を押すと、
+それぞれ、iOS のシュミレータ、Android のエミュレータが起動します。
+（Android の場合は Android Studio を先に起動しておく必要もあります。）
+
+iOS のシュミレータを使うには Xcode が必要なので、まだの人は下記を参考にインストールしてください。
 [Xcode のインストールの参考](https://docs.expo.io/workflow/ios-simulator/)
 
-android のエミュレータを使うには Android Studio Emulator をインストール
+Android のエミュレータを使うには Android Studio Emulator が必要なので、まだの人は下記を参考にをインストールしてください。
 [Android Studio Emulator のインストールの参考](https://docs.expo.io/workflow/android-studio-emulator/)
 
-## ios のシュミレータを使おうとすると下記のようなエラーが出る場合
+### iOS のシュミレータを使おうとすると下記のようなエラーが出る場合
 
 `Error: EMFILE: too many open files, watch at FSEvent.FSWatcher.\_handle.onchange (internal/fs/watchers.js:178:28)`
 
 [エラー対処の参考](https://stackoverflow.com/questions/58675179/error-emfile-too-many-open-files-react-native-cli)
+
+上記を参考に、
 
 ```
 $ brew update
@@ -85,9 +104,13 @@ $ brew update
 $ brew install watchman
 ```
 
-インストールしようとすると下記のようなエラーに当たる場合は、
+をします。
+
+watchman をインストールしようとすると下記のようなエラーに当たる場合は、
 
 `Error: python@3.9: the bottle needs the Apple Command Line Tools to be installed. You can install them, if desired, with: xcode-select --install`
+
+エラー文の通り、
 
 ```
 $ xcode-select --install
@@ -99,11 +122,11 @@ $ xcode-select --install
 $ brew install watchman
 ```
 
-をする
+をするとインストールできます。
 
-これでエミュレータが動くようになる。
+これでシュミレータが動くようになりました。
 
-## eslint の導入
+## Eslint の導入
 
 ```
 $ npx eslint --init
@@ -119,7 +142,7 @@ $ npx eslint --init
 ```
 
 文法のチェックと、ファイルの修正もして欲しいので,
-`To check syntax, find problems, and enforce code style`を選択。
+`To check syntax, find problems, and enforce code style`を選択します。
 
 ```
 ? What type of modules does your project use? …
@@ -148,12 +171,12 @@ TypeScript を使うか聞かれているので、`Yes`にします。
 
 ```
 ? Where does your code run? …  (Press <space> to select, <a> to toggle all, <i> to invert selection)
-✔ Browser
+  Browser
 ✔ Node
 ```
 
 どこでコードを走らせるかなので、
-`Node`を選択します
+`Node`を選択します。
 
 ```
 ? How would you like to define a style for your project? …
@@ -187,5 +210,11 @@ TypeScript を使うか聞かれているので、`Yes`にします。
 Config ファイルの形式を聞かれています。
 今回は`JavaScript` を選択します。
 
+### まとめ
+
 以上です。
-この記事が皆様のお役に立てれば嬉しいです。
+スマホアプリ初心者の自分は、「Xcode も Android Studio も必要なんだ!」と
+少し戸惑いました（当たり前っちゃ当たり前なのか）が、
+思ったよりも簡単に環境構築ができた印象が自分の中ではあります。
+
+この記事が誰かのお役に立てれば嬉しいです。
