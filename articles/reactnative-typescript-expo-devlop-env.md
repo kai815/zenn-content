@@ -1,9 +1,9 @@
 ---
-title: " React Native,Expo,TypeScriptの開発環境構築"
+title: " React Native,Expo,TypeScriptの開発環境構築をする"
 emoji: "🎥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["ReactNative", "TypeScript", "Expo", "ESLint"]
-published: false
+published: true
 ---
 
 タイトル通りですが、React Native,Expo,TypeScript を用いた開発環境の構築をしていきます。
@@ -87,6 +87,9 @@ iOS のシュミレータを使うには Xcode が必要なので、まだの人
 
 Android のエミュレータを使うには Android Studio Emulator が必要なので、まだの人は下記を参考にをインストールしてください。
 [Android Studio Emulator のインストールの参考](https://docs.expo.io/workflow/android-studio-emulator/)
+
+無事起動できると以下の画像のようになります。（左が iOS で右が Android です）
+![](https://storage.googleapis.com/zenn-user-upload/8pjh9bu8vrp42d4k6dyxthxouqzn)
 
 ### iOS のシュミレータを使おうとすると下記のようなエラーが出る場合
 
