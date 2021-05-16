@@ -1,57 +1,86 @@
 ---
-title: " cypressでE2Eテストを実装"
-emoji: "🎥"
+title: " cypressでReactアプリにE2Eテストを導入する"
+emoji: "🌀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["React", "TypeScript", "Cypress"]
 published: false
 ---
 
-create-react-app で作られたアプリが前提
+create-react-app で作られたアプリに Cypress を用いて、
+E2E テスト実装したいと思います。
 
 [Cypress](https://www.cypress.io/)
 
 E2E テストとはブラウザでユーザが実際に操作するのを再現して行うテストです。
 
+## 環境
+
+```
+$ npm list --depth=0
+├── react@16.14.0
+├── react-dom@16.14.0
+└── typescript@3.7.7
+//必要そうなのだけ
+```
+
 インストール
-`yarn add -D cypress`
 
-package.json に以下を追記して
+```
+$ yarn add -D cypress
+```
 
-` "cy:open": "cypress open"`
+`package.json` に以下を追記して
 
-`yarn run cy:open`
+```
+"scripts": {
+  //これを追記
+  "cy:open": "cypress open"
+}
+```
+
+```
+$ yarn run cy:open
+```
+
 するといっぱいファイルが作られる
 
 cypress.json に今回テストするアプリの URL を記述します。
 
 ```
 {
-  "baseUrl": "http://localhost:3000"
+"baseUrl": "http://localhost:3000"
 }
 ```
 
-テストを起動するためのコマンド
+テストを起動するためのコマンドを`package.json`に記述します。
 
 ```
+
 "cy:run": "cypress run",
 "cy:run:chrome": "cypress run --browser chrome",
 "cy:run:firefox": "cypress run --browser firefox"
-```
-
-アプリケーションのパス/cypress/integration/sample.spec.js
-とかに以下を記述して、
 
 ```
+
+`アプリケーションのパス/cypress/integration/sample.spec.js`を作成して、
+以下を記述して、
+
+```
+
 //とりあえず動いてるか
 describe('Cypress', () => {
   it('が動いてるか', () => {
     expect(true).to.equal(true)
   })
 })
+
 ```
 
 アプリを起動して
-`yarn start`
+
+```
+$ yarn start
+```
 
 テストしてみると
 `yarn run cy:run --spec=./cypress/integration/sample.spec.js`
@@ -61,9 +90,10 @@ describe('Cypress', () => {
 ※ちなみにアプリを起動しないと以下のようなエラーになります。
 
 ```
+
 Cypress could not verify that this server is running:
 
-  > http://localhost:3000
+> http://localhost:3000
 
 We are verifying this server because it has been configured as your `baseUrl`.
 
@@ -78,6 +108,7 @@ Cypress failed to verify that your server is running.
 Please start this server and then run Cypress again.
 error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
 ```
 
 ts 化
@@ -91,6 +122,7 @@ https://docs.cypress.io/guides/tooling/typescript-support#Set-up-your-dev-enviro
 tsconfig.json
 
 ```
+
 {
 "extends": "../tsconfig.json",
 "compilerOptions": {
@@ -103,6 +135,14 @@ tsconfig.json
 ```
 
 data 属性を付与する
+
+```
+
+```
+
+```
+
+```
 
 ```
 
