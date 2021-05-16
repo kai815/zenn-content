@@ -1,5 +1,5 @@
 ---
-title: " cypressでReactアプリにE2Eテストを導入する"
+title: " CypressでReactアプリにE2Eテストを導入する"
 emoji: "🌀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["React", "TypeScript", "Cypress"]
@@ -23,7 +23,11 @@ $ npm list --depth=0
 //必要そうなのだけ
 ```
 
-インストール
+また、今回使うアプリは [React のチュートリアル](https://ja.reactjs.org/tutorial/tutorial.html)です。
+
+## 導入
+
+インストールします。
 
 ```
 $ yarn add -D cypress
@@ -31,7 +35,7 @@ $ yarn add -D cypress
 
 `package.json` に以下を追記して
 
-```
+```json:package.json
 "scripts": {
   //これを追記
   "cy:open": "cypress open"
@@ -42,31 +46,36 @@ $ yarn add -D cypress
 $ yarn run cy:open
 ```
 
-するといっぱいファイルが作られる
+を実行すると、以下の画像のような画面が立ち上がります。
 
-cypress.json に今回テストするアプリの URL を記述します。
+そして、cypress ディレクトリが作られて、サンプルのファイルなどができている。
 
-```
+`cypress.json` に今回テストするアプリの URL を記述します。
+
+```json:cypress.json
 {
-"baseUrl": "http://localhost:3000"
+  "baseUrl": "http://localhost:3000"
 }
 ```
 
 テストを起動するためのコマンドを`package.json`に記述します。
 
+```json:package.json
+"scripts":{
+  //以下を追記
+  "cy:run": "cypress run",
+  "cy:run:chrome": "cypress run --browser chrome",
+  "cy:run:firefox": "cypress run --browser firefox"
+}
+
 ```
 
-"cy:run": "cypress run",
-"cy:run:chrome": "cypress run --browser chrome",
-"cy:run:firefox": "cypress run --browser firefox"
-
-```
+`--browser`でブラウザの指定ができるようです。
 
 `アプリケーションのパス/cypress/integration/sample.spec.js`を作成して、
 以下を記述して、
 
-```
-
+```js:sample.spec.js
 //とりあえず動いてるか
 describe('Cypress', () => {
   it('が動いてるか', () => {
@@ -85,7 +94,7 @@ $ yarn start
 テストしてみると
 `yarn run cy:run --spec=./cypress/integration/sample.spec.js`
 
-実行して見ると以下のように実行できてることがわかります。
+実行して見ると以下の画像のように実行できてることがわかります。
 
 ※ちなみにアプリを起動しないと以下のようなエラーになります。
 
@@ -111,28 +120,27 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 
 ```
 
-ts 化
-しようとするとエラーになる
+## TypeScript で書けるように
+
+TS 化しようとすると下記のようなエラーになります。
 
 `cypress sample.spec.ts' cannot be compiled under '--isolatedModules' because it is considered a global script file. Add an import, export, or an empty 'export {}' statement to make it a module.`
 
-cypress 配下に書けば行けそう
+cypress 配下に tsconfig を書けばいけそう
 https://docs.cypress.io/guides/tooling/typescript-support#Set-up-your-dev-environment
 
-tsconfig.json
-
-```
-
+```json:tsconfig.json
 {
-"extends": "../tsconfig.json",
-"compilerOptions": {
-"isolatedModules": false,
-"types": ["cypress"]
-},
-"include": ["./**/*.ts"]
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "isolatedModules": false,
+    "types": ["cypress"]
+  },
+  "include": ["./**/*.ts"]
 }
-
 ```
+
+## React チュートリアルにテスト書く
 
 data 属性を付与する
 
