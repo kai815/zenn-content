@@ -48,7 +48,7 @@ $ yarn run cy:open
 
 を実行すると、以下の画像のような画面が立ち上がります。
 
-そして、cypress ディレクトリが作られて、サンプルのファイルなどができている。
+そして、cypress ディレクトリが作られて、サンプルのファイルなどができています。
 
 `cypress.json` に今回テストするアプリの URL を記述します。
 
@@ -92,7 +92,10 @@ $ yarn start
 ```
 
 テストしてみると
-`yarn run cy:run --spec=./cypress/integration/sample.spec.js`
+
+```
+$ yarn run cy:run --spec=./cypress/integration/sample.spec.js
+```
 
 実行して見ると以下の画像のように実行できてることがわかります。
 
@@ -142,16 +145,134 @@ https://docs.cypress.io/guides/tooling/typescript-support#Set-up-your-dev-enviro
 
 ## React チュートリアルにテスト書く
 
-data 属性を付与する
+### data 属性を付与する
+
+自分なりに React チュートリアルの書き方を変更しているので、
+必ずしも全く同じではないかと思います。
+
+#### ボタンに属性を付与
+
+```tsx:src/components/square/index.tsx
+//必要そうなところのみ抜粋
+export interface SquarePropsInterface {
+  value: string;
+  onClick: () => void;
+  indexNumber: number;
+}
+
+export const Square = (props:SquarePropsInterface) => {
+  return (
+    <button
+      css={SquareStyle}
+      onClick={() => {
+        props.onClick();
+      }}
+      //ここでデータ属性を付与
+      data-e2e={`button-${props.indexNumber}`}
+    >
+      <span css={SquareText}>{props.value}</span>
+    </button>
+  );
+}
 
 ```
 
-```
+```tsx:my-app/src/components/board/index.tsx
+
+//必要そうなところのみ抜粋
+export interface BoardPropsInterface {
+  squares: string[];
+  onClick: (i: number) => void;
+}
+
+export const Board = (props:BoardPropsInterface) => {
+  const renderSquare = (i: number)=> {
+    return (
+      <Square
+        value={props.squares[i]}
+        indexNumber={i}
+        onClick={() => props.onClick(i)}
+      />
+    );
+  }
+  return (
+    <div>
+      <div css={BordRowStyle}>
+        {renderSquare(0)}
+        {renderSquare(1)}
+        {renderSquare(2)}
+      </div>
+      <div css={BordRowStyle}>
+        {renderSquare(3)}
+        {renderSquare(4)}
+        {renderSquare(5)}
+      </div>
+      <div css={BordRowStyle}>
+        {renderSquare(6)}
+        {renderSquare(7)}
+        {renderSquare(8)}
+      </div>
+    </div>
+  );
+}
 
 ```
 
+#### ゲームのステータスを表示するところのに付与
+
+```tsx:my-app/src/components/status/index.tsx
+
+//必要そうなところのみ抜粋
+
+export interface StatusPropsInterFace{
+  winner:string | null | undefined,
+  xIsNext:boolean
+}
+
+export const Status = (props:StatusPropsInterFace) => {
+  const { winner, xIsNext } = props;
+  let status;
+  if (winner) {
+    status = 'Winner: ' + winner;
+  } else{
+    status = `次のプレイヤー ${xIsNext ? "X" : "O"}'s turn`;
+  }
+  return (
+    <>
+    // ここでデータ属性を付与
+      <span data-e2e="status">
+        {status}
+      </span>
+    </>
+  )
+}
 ```
 
-```
+### テストを書く
+
+```ts:my-app/cypress/integration/game.spec.ts
+
+describe('OXゲームで勝敗が決定した時のテスト', function () {
+  //ホームURLに訪れる
+  beforeEach(() => {
+    cy.visit('/');
+  });
+
+  it('Xが勝利', () => {
+    //最初のターンで左上のボタンをクリック
+    cy.get('[data-e2e="button-0"]').click().get('[data-e2e="button-0"]').should('have.text', 'X')
+    //その次のターンで一番上の真ん中をクリック
+    cy.get('[data-e2e="button-1"]').click().get('[data-e2e="button-1"]').should('have.text', 'O')
+    //その次のターン一番左の列の真ん中の段をクリック
+    cy.get('[data-e2e="button-3"]').click().get('[data-e2e="button-3"]').should('have.text', 'X')
+    //その次のターン一番真ん中の真ん中の段をクリック
+    cy.get('[data-e2e="button-4"]').click().get('[data-e2e="button-4"]').should('have.text', 'O')
+    //その次のターンで左下をクリック
+    cy.get('[data-e2e="button-6"]').click().get('[data-e2e="button-6"]').should('have.text', 'X')
+    //Xが勝利
+    cy.get('[data-e2e="status"]').should('have.text', 'Winner: X')
+  });
+
+});
 
 ```
