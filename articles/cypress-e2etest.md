@@ -3,7 +3,7 @@ title: " CypressでReactアプリにE2Eテストを導入する"
 emoji: "🌀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["React", "TypeScript", "Cypress"]
-published: false
+published: true
 ---
 
 create-react-app で作られたアプリに Cypress を用いて、
@@ -23,7 +23,7 @@ $ npm list --depth=0
 //必要そうなのだけ
 ```
 
-また、今回使うアプリは [React のチュートリアル](https://ja.reactjs.org/tutorial/tutorial.html)です。
+また、今回テストに使うアプリは [React のチュートリアル](https://ja.reactjs.org/tutorial/tutorial.html)です。
 
 ## 導入
 
@@ -47,6 +47,8 @@ $ yarn run cy:open
 ```
 
 を実行すると、以下の画像のような画面が立ち上がります。
+
+![](https://storage.googleapis.com/zenn-user-upload/ltibnf6ibk7xxsxjo5y1fv2gpmev)
 
 そして、cypress ディレクトリが作られて、サンプルのファイルなどができています。
 
@@ -72,8 +74,8 @@ $ yarn run cy:open
 
 `--browser`でブラウザの指定ができるようです。
 
-`アプリケーションのパス/cypress/integration/sample.spec.js`を作成して、
-以下を記述して、
+`integration`ディレクトリに`sample.spec.js`を作成し、
+以下を記述します。
 
 ```js:sample.spec.js
 //とりあえず動いてるか
@@ -85,19 +87,21 @@ describe('Cypress', () => {
 
 ```
 
-アプリを起動して
+アプリを起動し増す。
 
 ```
 $ yarn start
 ```
 
-テストしてみると
+アプリを起動した上で、テストを実行してみると
 
 ```
 $ yarn run cy:run --spec=./cypress/integration/sample.spec.js
 ```
 
 実行して見ると以下の画像のように実行できてることがわかります。
+
+![](https://storage.googleapis.com/zenn-user-upload/dkcvvnit29kon9tb707fbe4fcn2f)
 
 ※ちなみにアプリを起動しないと以下のようなエラーになります。
 
@@ -130,7 +134,7 @@ TS 化しようとすると下記のようなエラーになります。
 `cypress sample.spec.ts' cannot be compiled under '--isolatedModules' because it is considered a global script file. Add an import, export, or an empty 'export {}' statement to make it a module.`
 
 cypress 配下に tsconfig を書けばいけそう
-https://docs.cypress.io/guides/tooling/typescript-support#Set-up-your-dev-environment
+[参考](https://docs.cypress.io/guides/tooling/typescript-support#Set-up-your-dev-environment)
 
 ```json:tsconfig.json
 {
@@ -218,7 +222,7 @@ export const Board = (props:BoardPropsInterface) => {
 
 ```
 
-#### ゲームのステータスを表示するところのに付与
+#### ゲームのステータスを表示するところにも付与
 
 ```tsx:my-app/src/components/status/index.tsx
 
@@ -239,7 +243,7 @@ export const Status = (props:StatusPropsInterFace) => {
   }
   return (
     <>
-    // ここでデータ属性を付与
+      //ここでデータ属性を付与
       <span data-e2e="status">
         {status}
       </span>
@@ -276,3 +280,48 @@ describe('OXゲームで勝敗が決定した時のテスト', function () {
 });
 
 ```
+
+ご覧の通りかなり直感的に書くことができるかと思います。
+`cy.get`で要素を取得して、クリックや、持つべきものを持っているかを判定しています。
+今回は data 属性で取得しましたが、class 名で取得したい時は、
+`get('.class-name')`とすると取得できるようです。
+
+[参考](https://docs.cypress.io/api/commands/get)
+
+テストを実行してみます。
+
+```
+$ yarn run cy:run --spec=./cypress/integration/game.spec.ts
+```
+
+![](https://storage.googleapis.com/zenn-user-upload/jnyeoaaqd6lmvrfhmasp6m7k8fhj)
+
+テストが通りました。
+
+### テストを音落す
+
+```diff ts:my-app/cypress/integration/game.spec.ts
+// OをXに変えてあえてテストを落す
+-  cy.get('[data-e2e="button-4"]').click().get('[data-e2e="button-4"]').should('have.text', 'O')
++  cy.get('[data-e2e="button-4"]').click().get('[data-e2e="button-4"]').should('have.text', 'X')
+```
+
+変更してからテストを実行します。
+
+```
+$ yarn run cy:run --spec=./cypress/integration/game.spec.ts
+```
+
+![](https://storage.googleapis.com/zenn-user-upload/hwu72i7nb4z4z6snzga1c10bte6t)
+意図通り、テストは落ちました。
+
+ちなみにテストを落とすとスクリーンショットをとってくれます。
+![](https://storage.googleapis.com/zenn-user-upload/kajqehr992ty3f2p1xzmg79wljpb)
+
+どこで落ちたのかも確認しやすいですね。
+
+### まとめ
+
+導入で設定することもそこまで多くなく、テストコードも直感的に書ける印象です。
+これから E2E テストを導入してみようかと考えている方は、検討してみてもいいかもしれませんね。
+この記事が、皆様のお役に立てれば嬉しいです。
