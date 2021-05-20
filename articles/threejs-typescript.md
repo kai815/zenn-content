@@ -18,3 +18,4 @@ https://threejs.org/
 参考
 https://ics.media/entry/16329/
 https://naokeyzmt.com/rogue/three-typescript/
+https://tyablog.net/2017/03/29/typescript-three-js/
