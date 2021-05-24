@@ -15,6 +15,8 @@ three.js のドキュメント
 
 TypeScript で書くメリット
 
+1.型があるので引数に何を渡すかがわかりやすい
+
 https://threejs.org/
 
 参考
