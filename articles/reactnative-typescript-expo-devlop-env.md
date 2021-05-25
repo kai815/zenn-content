@@ -217,7 +217,9 @@ Config ファイルの形式を聞かれています。
 
 <!-- TODO'React' was used before it was defined no-use-before-define -->
 
-JSX not allowed in files with extension '.tsx' react/jsx-filename-extension
+`JSX not allowed in files with extension '.tsx' react/jsx-filename-extension`
+
+`eslintrc.js` の `rules` に以下を追記します。
 
 ```js:.eslintrc.js
 rules: {
