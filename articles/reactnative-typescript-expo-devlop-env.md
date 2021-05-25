@@ -213,6 +213,22 @@ TypeScript を使うか聞かれているので、`Yes`にします。
 Config ファイルの形式を聞かれています。
 今回は`JavaScript` を選択します。
 
+### eslint --fix ででたエラーの修正
+
+<!-- TODO'React' was used before it was defined no-use-before-define -->
+
+JSX not allowed in files with extension '.tsx' react/jsx-filename-extension
+
+```js:.eslintrc.js
+rules: {
++  'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
+}
+```
+
+[参考](https://stackoverflow.com/questions/55614983/jsx-not-allowed-in-files-with-extension-tsxeslintreact-jsx-filename-extensio)
+
+<!-- TODOStyle prop value must be an object react/style-prop-object -->
+
 ### まとめ
 
 以上です。
