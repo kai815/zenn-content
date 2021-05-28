@@ -229,7 +229,46 @@ rules: {
 
 [参考](https://stackoverflow.com/questions/55614983/jsx-not-allowed-in-files-with-extension-tsxeslintreact-jsx-filename-extensio)
 
-<!-- TODOStyle prop value must be an object react/style-prop-object -->
+`Style prop value must be an object react/style-prop-object`
+
+原因の箇所
+
+```tsx:App.tsx
+import React from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Hello React Native!</Text>
+      //これ
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+```
+
+元々 Expo で用意してくれるコンポーネントに渡すところなので、一旦ここは許すように rule を変更します。（他にいい方法あるのかな。。）
+
+```js:.eslintrc.js
+rules: {
++   'react/style-prop-object': [1,
++      { allow: ['StatusBar'] },
++   ],
+}
+```
+
+[参考](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md)
 
 ### まとめ
 
