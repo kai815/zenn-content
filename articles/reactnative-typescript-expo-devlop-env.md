@@ -215,7 +215,18 @@ Config ファイルの形式を聞かれています。
 
 ### eslint --fix ででたエラーの修正
 
-<!-- TODO'React' was used before it was defined no-use-before-define -->
+`'React' was used before it was defined no-use-before-define`
+
+`eslintrc.js` の `rules` に以下を追記します。
+
+```js:.eslintrc.js
+rules: {
++  'no-use-before-define': 'off',
++  '@typescript-eslint/no-use-before-define': ['error'],
+}
+```
+
+[参考](https://stackoverflow.com/questions/63818415/react-was-used-before-it-was-defined)
 
 `JSX not allowed in files with extension '.tsx' react/jsx-filename-extension`
 
