@@ -18,11 +18,15 @@ docker desktop
 
 https://hub.docker.com/r/genschsa/mysql-employees
 
+イメージを pull します。
+
 ```
 $ docker pull genschsa/mysql-employees
 ```
 
-当たり前ですが、DockerDeskTop を起動してくださいね
+※当たり前ですが、DockerDeskTop を起動してくださいね
+
+イメージを動かします。
 
 ```
  docker run -d \
@@ -33,7 +37,7 @@ $ docker pull genschsa/mysql-employees
   genschsa/mysql-employees
 ```
 
-起動してるか確認
+起動してるか確認します。
 
 ```
 $ docker ps
@@ -41,11 +45,13 @@ CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
 f656a298255f genschsa/mysql-employees "docker-entrypoint.s…" 2 minutes ago Up 2 minutes 0.0.0.0:3306->3306/tcp, 33060/tcp mysql-employees
 ```
 
-コンテナに入る
+コンテナに入ります。
 
 ```
 $ docker exec -i -t mysql-employees bash
 ```
+
+`mysql-employees` はイメージの名前です。
 
 MySQL にログイン
 
@@ -54,7 +60,9 @@ root@f656a298255f:/# mysql -u root -p
 Enter password:
 ```
 
-パスワードは college
+パスワードは `college`です。
+
+データベースを見ます。
 
 ```
 mysql> show databases;
