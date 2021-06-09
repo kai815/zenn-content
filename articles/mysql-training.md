@@ -61,6 +61,7 @@ Enter password:
 ```
 
 パスワードは `college`です。
+docker run コマンドをしたときに指定してました。
 
 データベースを見ます。
 
