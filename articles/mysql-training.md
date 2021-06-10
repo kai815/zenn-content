@@ -65,7 +65,7 @@ docker run コマンドをしたときに指定してました。
 
 データベースを見ます。
 
-```
+```sql
 mysql> show databases;
 +--------------------+
 | Database           |
@@ -78,11 +78,11 @@ mysql> show databases;
 +--------------------+
 ```
 
-```
+```sql
 mysql> use employees
 ```
 
-```
+```sql
 mysql> show tables;
 +----------------------+
 | Tables_in_employees  |
@@ -101,7 +101,7 @@ mysql> show tables;
 10 rows in set (0.00 sec)
 ```
 
-```
+```sql
 mysql> show columns from employees;
 +------------+---------------+------+-----+---------+-------+
 | Field      | Type          | Null | Key | Default | Extra |
@@ -114,4 +114,14 @@ mysql> show columns from employees;
 | hire_date  | date          | NO   |     | NULL    |       |
 +------------+---------------+------+-----+---------+-------+
 6 rows in set (0.00 sec)
+```
+
+```sql
+mysql> SELECT COUNT(emp_no) FROM employees WHERE gender = 'M';
++---------------+
+| COUNT(emp_no) |
++---------------+
+|        179973 |
++---------------+
+1 row in set (0.06 sec)
 ```
