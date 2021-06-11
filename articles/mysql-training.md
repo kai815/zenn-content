@@ -62,6 +62,7 @@ Enter password:
 
 パスワードは `college`です。
 docker run コマンドをしたときに指定してました。
+`MYSQL_ROOT_PASSWORD=college`のところです。
 
 データベースを見ます。
 
