@@ -6,6 +6,11 @@ topics: ["MySQL", "Docker"]
 published: false
 ---
 
+[こちらのイメージ](https://hub.docker.com/r/genschsa/mysql-employees)が MySQL の練習にとても便利なので、
+そちらを使い始めるまでの手順を紹介します。
+実際に使い始めるまでに、自分はあれ MySQL にログインするときのパスワードは？など意外と詰まってしまったので、
+同じような方の役に立ったら嬉しいです。
+
 ## 環境
 
 macOS Big Sur
@@ -14,9 +19,7 @@ macOS Big Sur
 docker desktop
 バージョン 3.1.0
 
-##
-
-https://hub.docker.com/r/genschsa/mysql-employees
+## MySQL を使えるようにする
 
 イメージを pull します。
 
@@ -64,10 +67,12 @@ Enter password:
 docker run コマンドをしたときに指定してました。
 `MYSQL_ROOT_PASSWORD=college`のところです。
 
+## MySQL で実際に操作してみる
+
 データベースを見ます。
 
 ```sql
-mysql> show databases;
+mysql> SHOW DATABASES;
 +--------------------+
 | Database           |
 +--------------------+
@@ -77,14 +82,19 @@ mysql> show databases;
 | performance_schema |
 | sys                |
 +--------------------+
+5 rows in set (0.00 sec)
 ```
 
-```sql
-mysql> use employees
-```
+employess のデータベースを使います。
 
 ```sql
-mysql> show tables;
+mysql> USE employees
+```
+
+テーブルを確認します。
+
+```sql
+mysql> SHOW TABLES;
 +----------------------+
 | Tables_in_employees  |
 +----------------------+
@@ -102,8 +112,10 @@ mysql> show tables;
 10 rows in set (0.00 sec)
 ```
 
+emloyess テーブルのカラムを確認します。
+
 ```sql
-mysql> show columns from employees;
+mysql> SHOW COLUMNS FROM employees;
 +------------+---------------+------+-----+---------+-------+
 | Field      | Type          | Null | Key | Default | Extra |
 +------------+---------------+------+-----+---------+-------+
@@ -116,6 +128,8 @@ mysql> show columns from employees;
 +------------+---------------+------+-----+---------+-------+
 6 rows in set (0.00 sec)
 ```
+
+gender が M の employee の数を集計します。
 
 ```sql
 mysql> SELECT COUNT(emp_no) FROM employees WHERE gender = 'M';
