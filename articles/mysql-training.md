@@ -6,7 +6,7 @@ topics: ["MySQL", "Docker"]
 published: true
 ---
 
-[mysql-employees](https://hub.docker.com/r/genschsa/mysql-employees)とイメージが MySQL の練習にとても便利なので、
+[mysql-employees](https://hub.docker.com/r/genschsa/mysql-employees)というイメージが MySQL の練習にとても便利なので、
 そちらを使い始めるまでの手順を紹介します。
 実際に使い始めるまでに、自分は「あれ？MySQL にログインするときのパスワードは？』など意外と詰まってしまったので、
 同じような方の役に立ったら嬉しいです。
