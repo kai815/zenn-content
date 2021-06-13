@@ -27,7 +27,7 @@ docker desktop
 $ docker pull genschsa/mysql-employees
 ```
 
-※当たり前ですが、DockerDeskTop を起動してくださいね
+※当たり前ですが、Docker Desktop を起動してくださいね
 
 イメージを動かします。
 
