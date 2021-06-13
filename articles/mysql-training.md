@@ -1,14 +1,14 @@
 ---
-title: " MySQLのトレーニングにいいDockerイメージ"
+title: " MySQLのトレーニングに使えるDockerイメージ"
 emoji: "🎩"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["MySQL", "Docker"]
-published: false
+published: true
 ---
 
-[こちらのイメージ](https://hub.docker.com/r/genschsa/mysql-employees)が MySQL の練習にとても便利なので、
+[mysql-employees](https://hub.docker.com/r/genschsa/mysql-employees)とイメージが MySQL の練習にとても便利なので、
 そちらを使い始めるまでの手順を紹介します。
-実際に使い始めるまでに、自分はあれ MySQL にログインするときのパスワードは？など意外と詰まってしまったので、
+実際に使い始めるまでに、自分は「あれ？MySQL にログインするときのパスワードは？』など意外と詰まってしまったので、
 同じような方の役に立ったら嬉しいです。
 
 ## 環境
@@ -129,14 +129,37 @@ mysql> SHOW COLUMNS FROM employees;
 6 rows in set (0.00 sec)
 ```
 
+employee の数を集計します。
+
+```sql
+mysql> SELECT COUNT(*) FROM employees;
++----------+
+| COUNT(*) |
++----------+
+|   300024 |
++----------+
+1 row in set (0.04 sec)
+```
+
+データも元々多く入っているので、トレーニングで便利ですね。
+
 gender が M の employee の数を集計します。
 
 ```sql
-mysql> SELECT COUNT(emp_no) FROM employees WHERE gender = 'M';
-+---------------+
-| COUNT(emp_no) |
-+---------------+
-|        179973 |
-+---------------+
-1 row in set (0.06 sec)
+mysql> SELECT COUNT(*) FROM employees WHERE gender = 'M';
++----------+
+| COUNT(*) |
++----------+
+|   179973 |
++----------+
+1 row in set (0.03 sec)
 ```
+
+## 最後に
+
+mysql-employees を使うことで、手軽に MySQL のトレーニング環境を手に入れることができました。
+データも元々入っているので、データを投入する手間なども削減されるでしょう。
+元に戻したい時にもコンテナを削除して再び立ち上げればいいので、
+気持ち的に楽にトレーニングできるのではないでしょうか。
+
+この記事が誰かの役に立ったら嬉しいです。
