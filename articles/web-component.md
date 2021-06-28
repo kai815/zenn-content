@@ -16,3 +16,5 @@ https://hatenanews.com/articles/2021/05/26/103000
 ## WebComponent とは
 
 [WebComponent](https://developer.mozilla.org/ja/docs/Web/Web_Components)
+
+なんか共通で使えるみたい？くらいしかわからないですね笑
