@@ -69,6 +69,8 @@ buildModules に`nuxt-vite`を追記します。
 
 他にも色々エラーが出たので見送りました。(2021 年 7 月 11 日時点くらい)
 
+あとは、[import を書き換える必要](https://vite.nuxtjs.org/misc/common-issues)がありそうだったり。
+
 ## 最後に
 
 Vite は Nuxt 以外にも使えて、開発体験の向上もかなり見込めるツールなので、これから楽しみだなぁという印象です。
