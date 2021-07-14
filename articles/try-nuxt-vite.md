@@ -56,7 +56,7 @@ buildModules に`nuxt-vite`を追記します。
 
 ![vite の Nuxt](https://storage.googleapis.com/zenn-user-upload/4a7b27ccf5964213e130ea7c.gif)
 変更を保存した後にすぐ、秒でとかではなく一瞬というかほぼ同時に画面に反映されます。
-
+(warning はけっこう出てますが。。。)
 通常の Nuxt でもそんなに不満はなかったのですが、このくらい速いと開発体験はかなり向上されそうです。
 
 ## 本番プロジェクトでの運用
@@ -65,11 +65,13 @@ buildModules に`nuxt-vite`を追記します。
 
 [Preprocessor dependency "sass" not found. Did you install it?](https://github.com/nuxt/vite/issues/23)とかはバージョン変えればいいだけだったのですが、
 
+[このイシュー](https://github.com/nuxt/vite/issues/71)があったり、
+
 他にも色々エラーが出たので見送りました。(2021 年 7 月 11 日時点くらい)
 
 ## 最後に
 
-Vite は Nuxt 以外にも使えて、開発体験の向上もかなり見込めるツールなので、これから楽しみだなぁとい印象です。
-Storybook とかにも使えたらかなりいいなと。
+Vite は Nuxt 以外にも使えて、開発体験の向上もかなり見込めるツールなので、これから楽しみだなぁという印象です。
+Storybook とかにも使えたらかなりいいなと。Storybook 速くなるの嬉しいです。
 (あとは、Next もサポートするのかな。)
 この記事が誰かの役に立ったら嬉しいです。
