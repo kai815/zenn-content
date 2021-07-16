@@ -14,3 +14,5 @@ https://visualstudio.microsoft.com/ja/vs/mac/
 mac 内に windows 環境を作ります。
 
 「Boot Camp」「Parallels」「VirtualBox」があります。
+
+今回は BootCamp を選択する事にしました。
