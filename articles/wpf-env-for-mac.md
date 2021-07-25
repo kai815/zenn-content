@@ -30,3 +30,7 @@ mac 内に windows 環境を作ります。
 それでは、環境構築に取り掛かりましょう。
 
 まずは
+
+BootCamp だと空きディスクを 64GB も用意する必要がある
+https://support.apple.com/ja-jp/HT201468
+ので、BootCamp だと難しい
