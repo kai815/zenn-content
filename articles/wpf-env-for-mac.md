@@ -27,10 +27,10 @@ mac 内に windows 環境を作ります。
 
 ・Apple が提供してるらしいので安心
 
-それでは、環境構築に取り掛かりましょう。
-
-まずは
+と考えていたが、
 
 BootCamp だと空きディスクを 64GB も用意する必要がある
 https://support.apple.com/ja-jp/HT201468
-ので、BootCamp だと難しい
+ので、自分の Mac の空き容量を考えると BootCamp だと難しい。
+
+paralells の無料版でまずはやってみる
