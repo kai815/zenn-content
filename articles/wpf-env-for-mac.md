@@ -23,7 +23,7 @@ mac 内に windows 環境を作ります。
 
 ・お金をかけたくない
 
-・VirtualBox などは重いらしい
+・VirtualBox は重いらしい
 
 ・Apple が提供してるらしいので安心
 
@@ -34,3 +34,8 @@ https://support.apple.com/ja-jp/HT201468
 ので、自分の Mac の空き容量を考えると BootCamp だと難しい。
 
 paralells の無料版でまずはやってみる
+
+以下のリンクからダウンロード
+https://www.parallels.com/jp/
+
+アクセスの許可
