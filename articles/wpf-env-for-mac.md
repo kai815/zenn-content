@@ -39,3 +39,6 @@ paralells の無料版でまずはやってみる
 https://www.parallels.com/jp/
 
 アクセスの許可
+
+チュートリアル
+https://docs.microsoft.com/ja-jp/visualstudio/get-started/csharp/tutorial-wpf?view=vs-2019
