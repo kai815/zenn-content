@@ -38,7 +38,7 @@ paralells の無料版でまずはやってみる
 以下のリンクからダウンロード
 https://www.parallels.com/jp/
 
-アクセスの許可
+dmg ファイルをダブルクリックして、あとは流れに沿っていくだけです。本当にこれだけでできるので驚きです。
 
 チュートリアル
 https://docs.microsoft.com/ja-jp/visualstudio/get-started/csharp/tutorial-wpf?view=vs-2019
