@@ -39,6 +39,7 @@ paralells の無料版でまずはやってみる
 https://www.parallels.com/jp/
 
 dmg ファイルをダブルクリックして、あとは流れに沿っていくだけです。本当にこれだけでできるので驚きです。
+Windows で VisualStudio をダウンロードします。
 
 チュートリアル
 https://docs.microsoft.com/ja-jp/visualstudio/get-started/csharp/tutorial-wpf?view=vs-2019
