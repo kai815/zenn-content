@@ -9,3 +9,5 @@ published: false
 nuxtjs の payload は dev だと undefined になる
 
 https://github.com/nuxt/nuxt.js/issues/8676
+
+yarn dev で試した時には以下のようになる。
