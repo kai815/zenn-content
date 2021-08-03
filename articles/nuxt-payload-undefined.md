@@ -11,3 +11,7 @@ nuxtjs の payload は dev だと undefined になる
 https://github.com/nuxt/nuxt.js/issues/8676
 
 yarn dev で試した時には以下のようになる。
+
+payload のデータは出てこない。
+
+generate してから、start すると 出てくる。
