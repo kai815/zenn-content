@@ -1,5 +1,5 @@
 ---
-title: "Nuxtjsのpayloadはdevだとundefinedになる"
+title: "Nuxtjsのgenerateの速度改善に役立つpayloadについて"
 emoji: "🪤"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Nuxt", "Vue"]
