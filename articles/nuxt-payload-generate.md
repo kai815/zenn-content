@@ -28,3 +28,6 @@ payload を使うことで、各ページの生成時に API にアクセスす�
 では実際に見てみましょう。
 
 news api を使って実際にやってみます。
+
+news api のリンクは下記です。
+https://newsapi.org/
