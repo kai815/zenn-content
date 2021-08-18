@@ -31,3 +31,9 @@ news api を使って実際にやってみます。
 
 news api のリンクは下記です。
 https://newsapi.org/
+
+axios の install
+
+```
+$ yarn add axios
+```
