@@ -36,3 +36,5 @@ axios の install
 ```
 $ yarn add axios
 ```
+
+API
