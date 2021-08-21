@@ -37,4 +37,4 @@ axios の install
 $ yarn add axios
 ```
 
-API
+API のを叩くために axios を利用します。
