@@ -38,3 +38,5 @@ $ yarn add axios
 ```
 
 API のを叩くために axios を利用します。
+
+qiita の API 一覧を取得します。
