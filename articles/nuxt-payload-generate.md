@@ -40,3 +40,9 @@ $ yarn add axios
 API のを叩くために axios を利用します。
 
 qiita の API 一覧を取得します。
+
+一覧の取得のドキュメントはこちら
+https://qiita.com/api/v2/docs#get-apiv2items
+
+特定の記事の取得
+https://qiita.com/api/v2/docs#get-apiv2itemsitem_id
