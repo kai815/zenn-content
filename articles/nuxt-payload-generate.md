@@ -49,3 +49,5 @@ https://qiita.com/api/v2/docs#get-apiv2itemsitem_id
 
 100 件の記事を取得
 https://qiita.com/api/v2/items?page=1&per_page=100
+
+payload は undefined になる
