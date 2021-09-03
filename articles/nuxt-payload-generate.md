@@ -18,7 +18,7 @@ generate してから、start すると 出てくる。
 
 yarn dev でも出てきた欲しい気もしますがね。
 
-ビルド速度の改善に役立ちます。
+## ビルド速度の改善に役立ちます。
 
 約半分になりました。
 payload を使うことで、各ページの生成時に API にアクセスする必要がなくなるので、generate がすごく速くなります。
@@ -50,4 +50,4 @@ https://qiita.com/api/v2/docs#get-apiv2itemsitem_id
 100 件の記事を取得
 https://qiita.com/api/v2/items?page=1&per_page=100
 
-payload は undefined になる
+## payload は undefined になる
