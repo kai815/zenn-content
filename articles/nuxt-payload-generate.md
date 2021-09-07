@@ -53,3 +53,5 @@ https://qiita.com/api/v2/docs#get-apiv2itemsitem_id
 https://qiita.com/api/v2/items?page=1&per_page=100
 
 ## payload は undefined になる
+
+残念ながら
