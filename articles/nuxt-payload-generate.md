@@ -55,3 +55,5 @@ https://qiita.com/api/v2/items?page=1&per_page=100
 ## payload は undefined になる
 
 残念ながらこれは解消できないみたいです
+
+yarn generate してから start する必要があります。
