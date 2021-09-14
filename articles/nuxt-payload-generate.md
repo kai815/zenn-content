@@ -59,3 +59,5 @@ https://qiita.com/api/v2/items?page=1&per_page=100
 yarn generate してから start する必要があります。
 
 これがめんどくさい
+
+これは Nuxt にも対応して欲しいものですね。
