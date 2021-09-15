@@ -1,5 +1,5 @@
 ---
-title: "Nuxtjsのgenerateの速度改善に役立つpayloadについて"
+title: "Nuxtjsのgenerateの速度改善~payloadちゃんと使えてますか？"
 emoji: "🪤"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Nuxt", "Vue"]
