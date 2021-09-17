@@ -64,7 +64,7 @@ yarn generate してから start する必要があります。
 
 ## コード
 
-`
+`vue
 <template>
 
 <div>
