@@ -64,7 +64,7 @@ yarn generate してから start する必要があります。
 
 ## コード
 
-`vue
+```vue:pages/post/index.vue
 <template>
 
 <div>
@@ -93,4 +93,27 @@ export default {
 }
 </script>
 
-`
+```
+
+```vue:pages/post/_id.vue
+<template>
+
+<div>
+  {{post.title}}
+</div>
+</template>
+
+<script>
+import axios from 'axios';
+export default {
+  async asyncData({params}){
+    return await axios.get(`https://qiita.com/api/v2/items/${params.id}`)
+    .then(response => {
+      return {
+        post: response.data
+      }
+    })
+  },
+}
+</script>
+```
