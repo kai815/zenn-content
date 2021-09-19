@@ -1,37 +1,30 @@
 ---
-title: "Nuxtjsのgenerateの速度改善~payloadちゃんと使えてますか？"
+title: "Nuxtjsのgenerateの改善~payloadちゃんと使えてますか？"
 emoji: "🪤"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Nuxt", "Vue"]
 published: false
 ---
 
-nuxtjs の payload は dev だと undefined になる
+Nuxt の generate の改善を職場ですることがあったので、そこで得た知見を備忘録的に書いてきます。
 
-https://github.com/nuxt/nuxt.js/issues/8676
+## Qiita の API について
 
-yarn dev で試した時には以下のようになる。
-
-payload のデータは出てこない。
-
-generate してから、start すると 出てくる。
-
-yarn dev でも出てきた欲しい気もしますがね。
-
-## ビルド速度の改善に役立ちます。
-
-約半分になりました。
-payload を使うことで、各ページの生成時に API にアクセスする必要がなくなるので、generate がすごく速くなります。
-
-自分が行ったプロジェクトでは 14 分くらいかかっていたのが、7 分程度になりました。
-
-むしろ使わないと API のリクエストの上限に達するのでは？
-
-では実際に見てみましょう。
-
-quita api を使って実際にやってみます。
+Qiita api を使って実際にやってみます。
+(Zenn に記事書いてるのに Qiita で申し訳ないですが、サンプルにちょうどよかったので。)
 
 https://qiita.com/api/v2/docs
+
+一覧の取得のドキュメントはこちら
+https://qiita.com/api/v2/docs#get-apiv2items
+
+特定の記事の取得
+https://qiita.com/api/v2/docs#get-apiv2itemsitem_id
+
+100 件の記事を取得するには以下のような感じす。
+`https://qiita.com/api/v2/items?page=1&per_page=100`
+
+## axios を使う
 
 axios の install
 
@@ -41,32 +34,15 @@ $ yarn add axios
 
 API のを叩くために axios を利用します。
 
-qiita の API 一覧を取得します。
+## Nuxt の通常バージョンで generate する
 
-一覧の取得のドキュメントはこちら
-https://qiita.com/api/v2/docs#get-apiv2items
+nuxt-link にあるものは自動でビルドしてくれるようです。
+https://nuxtjs.org/ja/docs/configuration-glossary/configuration-generate#crawler
 
-特定の記事の取得
-https://qiita.com/api/v2/docs#get-apiv2itemsitem_id
-
-100 件の記事を取得
-https://qiita.com/api/v2/items?page=1&per_page=100
-
-## payload は undefined になる
-
-残念ながらこれは解消できないみたいです
-
-yarn generate してから start する必要があります。
-
-これがめんどくさい
-
-これは Nuxt にも対応して欲しいものですね。
-
-## コード
+まずは以下のようなソースでビルドしてみます。
 
 ```vue:pages/post/index.vue
 <template>
-
 <div>
   一覧
   <ul>
@@ -82,12 +58,21 @@ yarn generate してから start する必要があります。
 <script>
 import axios from 'axios';
 export default {
-  async asyncData(){
-    return await axios.get('https://qiita.com/api/v2/items?page=1&per_page=100')
+  async asyncData() {
+    return await axios.get('https://qiita.com/api/v2/items?page=1&per_page=100',
+      {
+         headers: {
+           Authorization: `Bearer 認証トークン`,
+         }
+      }
+    )
     .then(response => {
       return {
         posts: response.data
       }
+    })
+    .catch(error => {
+      console.log(error)
     })
   },
 }
@@ -97,7 +82,6 @@ export default {
 
 ```vue:pages/post/_id.vue
 <template>
-
 <div>
   {{post.title}}
 </div>
@@ -106,14 +90,34 @@ export default {
 <script>
 import axios from 'axios';
 export default {
-  async asyncData({params}){
-    return await axios.get(`https://qiita.com/api/v2/items/${params.id}`)
-    .then(response => {
-      return {
-        post: response.data
-      }
-    })
-  },
+  async asyncData({ payload, params }){
+    const post = payload !== undefined ? payload :(await axios.get(`https://qiita.com/api/v2/items/${params.id}`,
+      {
+         headers: {
+           Authorization: `Bearer 認証トークン`,
+         }
+       }
+    )).data
+    return { post }
+  }
 }
 </script>
 ```
+
+## payload を使う
+
+https://nuxtjs.org/ja/docs/configuration-glossary/configuration-generate#routes
+
+https://nuxtjs.org/ja/docs/configuration-glossary/configuration-generate#payload-%E3%81%AB%E3%82%88%E3%82%8B%E5%8B%95%E7%9A%84%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E7%94%9F%E6%88%90%E3%81%AE%E9%AB%98%E9%80%9F%E5%8C%96
+
+## payload は undefined になる
+
+残念ながらこれは解消できないみたいです
+
+https://github.com/nuxt/nuxt.js/issues/8676
+
+yarn generate してから start する必要があります。
+
+これがめんどくさい
+
+これは Nuxt にも対応して欲しいものですね。
