@@ -257,7 +257,7 @@ export default {
 
 ここまでのソースは[こちら](https://github.com/kai815/try-vite/tree/use-payload/normal-nuxt)です
 
-## payload は dev では undefined になる
+### payload は dev では undefined になる
 
 `yarn dev` では `payload`は`undefined` になるので、注意する必要があります。
 
