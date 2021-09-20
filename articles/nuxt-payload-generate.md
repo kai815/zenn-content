@@ -6,7 +6,7 @@ topics: ["Nuxt", "Vue", "JavaScript"]
 published: true
 ---
 
-Nuxt の generate の改善を職場ですることがあったので、そこで得た知見を備忘録的に書いてきます。
+Nuxt の generate の改善を職場ですることがあったので、そこで学んだことを備忘録的に書いてきます。
 
 ## 環境
 
