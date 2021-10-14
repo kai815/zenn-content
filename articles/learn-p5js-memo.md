@@ -18,3 +18,5 @@ https://ics.media/entry/210129/
 https://www.youtube.com/watch?v=8j0UDiN7my4&t=3s
 
 テンション高い youtuber の方
+
+丁寧な説明
