@@ -22,3 +22,5 @@ https://www.youtube.com/watch?v=8j0UDiN7my4&t=3s
 丁寧な説明
 
 ありがたい
+
+記事の修正。
