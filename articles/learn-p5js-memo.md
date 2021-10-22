@@ -11,6 +11,8 @@ p5js 学びのメモ
 p5js とは
 https://p5js.org/
 
+processing を js にしたもの
+
 typescript 環境構築
 
 https://ics.media/entry/210129/
