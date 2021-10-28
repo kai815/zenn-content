@@ -29,3 +29,5 @@ https://www.youtube.com/watch?v=8j0UDiN7my4&t=3s
 ありがたい
 
 記事の修正。
+
+ts だと補完が効くのでやりやすい。
