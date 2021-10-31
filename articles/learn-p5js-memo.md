@@ -31,3 +31,5 @@ https://www.youtube.com/watch?v=8j0UDiN7my4&t=3s
 記事の修正。
 
 ts だと補完が効くのでやりやすい。
+
+p5 は直感的でわかりやすい。
