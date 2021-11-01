@@ -33,3 +33,5 @@ https://www.youtube.com/watch?v=8j0UDiN7my4&t=3s
 ts だと補完が効くのでやりやすい。
 
 p5 は直感的でわかりやすい。
+
+p5 だけじゃなく class のこととか
