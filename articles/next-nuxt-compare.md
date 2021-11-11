@@ -10,3 +10,5 @@ Next と Nuxt を両方とも仕事で使ったことがあるので、比較を
 Link
 
 ビルド
+
+generate と getStatic
