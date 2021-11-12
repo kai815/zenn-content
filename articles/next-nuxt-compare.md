@@ -12,3 +12,5 @@ Link
 ビルド
 
 generate と getStatic
+
+isr
