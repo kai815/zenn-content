@@ -11,7 +11,7 @@ Link
 
 ビルド
 
-generate と getStatic
+generate と getStaticPaths
 
 isr
 
