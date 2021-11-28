@@ -16,3 +16,5 @@ generate と getStaticPaths
 isr
 
 payload
+
+chunk?
