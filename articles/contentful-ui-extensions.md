@@ -7,3 +7,5 @@ published: false
 ---
 
 contentful の UI Extensions
+
+extensions とは
