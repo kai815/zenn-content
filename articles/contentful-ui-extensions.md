@@ -12,4 +12,6 @@ extensions とは
 
 contenfu の入力
 
-かなり色々便利
+JSON Editor
+
+Youtube ID
