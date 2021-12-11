@@ -11,3 +11,5 @@ contentful の UI Extensions
 extensions とは
 
 contenfu の入力
+
+かなり色々便利
