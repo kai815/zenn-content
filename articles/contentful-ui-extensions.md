@@ -10,7 +10,7 @@ contentful の UI Extensions
 
 extensions とは
 
-contenfu の入力
+contenfu の入力を手助けしてくれる
 
 JSON Editor
 
