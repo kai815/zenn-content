@@ -11,6 +11,8 @@ https://developers.cyberagent.co.jp/blog/archives/32747/
 
 対策
 
+初期表示
+
 blob の画像やめる
 
 念のためのスクロールやめる
