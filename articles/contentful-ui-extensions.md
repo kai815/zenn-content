@@ -16,4 +16,4 @@ JSON Editor
 
 Youtube ID
 
-非エンジニア
+非エンジニアが使ってもわかりやすくしたい
