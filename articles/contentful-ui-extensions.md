@@ -17,3 +17,5 @@ JSON Editor
 Youtube ID
 
 非エンジニアが使ってもわかりやすくしたい
+
+JSON の入力がしんどい
