@@ -7,3 +7,6 @@ published: false
 ---
 
 GrapsQL 自体を否定する気持ちはないです。
+
+ドキュメント的なのが使えなかった
+query がわからなかった
