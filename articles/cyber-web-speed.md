@@ -22,7 +22,10 @@ blob の画像やめる
 main.js が重い
 
 posts のデータ多すぎ
-→
+
+→server/src/routes/api/post.js を見ると、
+limit とか指定できる
+
 画像多い
 
 mp3 と gif 重い
