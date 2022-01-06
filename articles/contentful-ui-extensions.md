@@ -10,7 +10,7 @@ contentful の UI Extensions
 
 extensions とは
 
-contenfu の入力を手助けしてくれる
+contenful の入力を手助けしてくれる
 
 JSON Editor
 
@@ -20,4 +20,7 @@ Youtube ID
 
 JSON の入力がしんどい
 
-設定の仕方
+## 設定の仕方
+
+Settings をクリックして、Extensions（スクショの赤枠）を押す
+![](https://storage.googleapis.com/zenn-user-upload/5f4c9daa4000-20220106.png)
