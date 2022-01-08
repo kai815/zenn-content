@@ -1,7 +1,7 @@
 ---
-title: "ContentfulのUI Extensions"
+title: "ContentfulのUI Extensionsの紹介"
 emoji: "💭"
-type: "tech" # tech: 技術記事 / idea: アイデア
+type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["Contentful"]
 published: false
 ---
