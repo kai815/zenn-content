@@ -47,3 +47,13 @@ youtube-id という extensions を入れたいなら、
 ![](https://storage.googleapis.com/zenn-user-upload/28795cc9d6fa-20220107.png)
 
 設定画面の説明
+
+FieldTypes はその名の通り、どんなフィールドのタイプにこの Extensions を適用するかです。
+
+Legacy sidebar extension の Yes, this is a legacy sidebar extension のチェックは不要です。
+（付けるとサイドバーに表示されます。）
+
+Hosting も元々チェックされてる Hosted by Contentful (srcdoc)でいいと思います。
+
+Code(required)に実際にどんな挙動をするかを記述します。
+Github からインストールした場合は、元々記述がありますので、必要に応じて、値を変更します。
