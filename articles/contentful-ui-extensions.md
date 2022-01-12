@@ -16,7 +16,7 @@ JSON Editor
 
 Youtube ID
 
-非エンジニアが使ってもわかりやすくしたい
+非エンジニアが使ってもわかりやすくしたいという要望に応えられる。
 
 JSON の入力がしんどい
 
@@ -53,7 +53,8 @@ FieldTypes はその名の通り、どんなフィールドのタイプにこの
 Legacy sidebar extension の Yes, this is a legacy sidebar extension のチェックは不要です。
 （付けるとサイドバーに表示されます。）
 
-Hosting も元々チェックされてる Hosted by Contentful (srcdoc)でいいと思います。
+Hosting も元々チェックされてる Hosted by Contentful (srcdoc)でいいです。
+もしホスティングを変更したければ、指定してください。
 
 Code(required)に実際にどんな挙動をするかを記述します。
 Github からインストールした場合は、元々記述がありますので、必要に応じて、値を変更します。
