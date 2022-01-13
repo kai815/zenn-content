@@ -8,12 +8,21 @@ published: false
 
 ## UI Extensions とは
 
-contenful の入力を手助けしてくれる
+Contentful の Web アプリの基本機能を拡張させてくれるものです。
+入力する際のインターフェイスをより使いやすくすることも可能です。
 
-JSON Editor
+参考リンク
+https://www.contentful.com/developers/docs/extensibility/ui-extensions/
 
-Youtube ID
+例：
+・JSON Editor
+JSON をそのまま編集させるのでなく、GUI 的に編集できるものです。
 
+・Youtube ID
+Youtube のリンクを入力すると、id だけを抽出してくれるものです。
+
+Contentful はビジネスサイドの非エンジニアの方も使うので、
+そういう方にもわかりやすいフィールドを作ることも可能です。
 非エンジニアが使ってもわかりやすくしたいという要望に応えられる。
 
 JSON の入力がしんどい
