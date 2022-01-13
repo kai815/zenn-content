@@ -6,9 +6,7 @@ topics: ["Contentful"]
 published: false
 ---
 
-contentful の UI Extensions
-
-extensions とは
+## UI Extensions とは
 
 contenful の入力を手助けしてくれる
 
