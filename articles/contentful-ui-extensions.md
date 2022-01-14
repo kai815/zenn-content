@@ -6,6 +6,9 @@ topics: ["Contentful"]
 published: false
 ---
 
+仕事で Contentful を使っているのですが、Contentful の UI Extensions という機能を初めて使って、
+便利だったのでその紹介です。
+
 ## UI Extensions とは
 
 Contentful の Web アプリの基本機能を拡張させてくれるものです。
@@ -21,22 +24,19 @@ JSON をそのまま編集させるのでなく、GUI 的に編集できるも�
 ・Youtube ID
 Youtube のリンクを入力すると、id だけを抽出してくれるものです。
 
-Contentful はビジネスサイドの非エンジニアの方も使うので、
-そういう方にもわかりやすいフィールドを作ることも可能です。
-非エンジニアが使ってもわかりやすくしたいという要望に応えられる。
-
-JSON の入力がしんどい
+Contentful を使うビジネスサイドの非エンジニアの方
+にもよりわかりやすい入力フィールドを作ることも可能です。
 
 ## 設定の仕方
 
-Settings をクリックして、Extensions（スクショの赤枠）を押す
+Settings をクリックして、Extensions（スクショの赤枠）を押します。
 ![](https://storage.googleapis.com/zenn-user-upload/5f4c9daa4000-20220106.png)
 
-すると、以下の画面になります。
+すると、以下のような画面になります。
 ここで、Add extension を押すと Github からインストールするか、新しく作成するかを選べるので、必要な方を選びます。（今回は、Github からの方で説明します。）
 ![](https://storage.googleapis.com/zenn-user-upload/b5e5b225928b-20220106.png)
 
-Github からの場合、以下のような画面になります。
+2.Github からの場合、以下のような画面になります。
 ![](https://storage.googleapis.com/zenn-user-upload/6431119ac555-20220107.png)
 
 そこに使いたい extensions の Github の extensions.json の URL を入力する必要があります。
@@ -65,3 +65,6 @@ Hosting も元々チェックされてる Hosted by Contentful (srcdoc)でいい
 
 Code(required)に実際にどんな挙動をするかを記述します。
 Github からインストールした場合は、元々記述がありますので、必要に応じて、値を変更します。
+
+元々の入力画面
+![](https://storage.googleapis.com/zenn-user-upload/56e5349bbbe0-20220114.png)
