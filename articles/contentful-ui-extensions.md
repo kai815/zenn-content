@@ -68,3 +68,6 @@ Github からインストールした場合は、元々記述がありますの�
 
 元々の入力画面
 ![](https://storage.googleapis.com/zenn-user-upload/56e5349bbbe0-20220114.png)
+
+フィールド側での設定
+![](https://storage.googleapis.com/zenn-user-upload/d83c9eca3e42-20220115.png)
