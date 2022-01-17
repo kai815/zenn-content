@@ -74,3 +74,5 @@ Github からインストールした場合は、元々記述がありますの�
 
 実際に設定した画面は以下です。Youtube の動画 URL を貼り付けると、動画の id のみが抽出されてます。
 ![](https://storage.googleapis.com/zenn-user-upload/70a24efd489e-20220116.gif)
+
+Youtube の動画の URL を上げるだけで、id を抽出してくれるので、「id ってどれ？」みたいなやりとりも減りそうですね。
