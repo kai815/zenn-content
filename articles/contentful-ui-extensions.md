@@ -29,6 +29,8 @@ Contentful を使うビジネスサイドの非エンジニアの方
 
 ## 設定の仕方
 
+ここからは、UI Extensions の設定の仕方を説明します。
+
 Settings をクリックして、Extensions（スクショの赤枠）を押します。
 ![](https://storage.googleapis.com/zenn-user-upload/5f4c9daa4000-20220106.png)
 
