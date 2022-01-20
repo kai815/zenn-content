@@ -31,15 +31,15 @@ Contentful を使うビジネスサイドの非エンジニアの方
 
 ここからは、UI Extensions の設定の仕方を説明します。
 
-1. Settings をクリックして、Extensions（スクショの赤枠）を押します。
-   ![](https://storage.googleapis.com/zenn-user-upload/5f4c9daa4000-20220106.png)
+Settings をクリックして、Extensions（スクショの赤枠）を押します。
+![](https://storage.googleapis.com/zenn-user-upload/5f4c9daa4000-20220106.png)
 
 すると、以下のような画面になります。
 ここで、Add extension を押すと Github からインストールするか、新しく作成するかを選べるので、必要な方を選びます。（今回は、Github からの方で説明します。）
 ![](https://storage.googleapis.com/zenn-user-upload/b5e5b225928b-20220106.png)
 
-2. Github からの場合、以下のような画面になります。
-   ![](https://storage.googleapis.com/zenn-user-upload/6431119ac555-20220107.png)
+2.Github からの場合、以下のような画面になります。
+![](https://storage.googleapis.com/zenn-user-upload/6431119ac555-20220107.png)
 
 そこに使いたい extensions の Github の extensions.json の URL を入力する必要があります。
 
@@ -83,3 +83,5 @@ Youtube の動画の URL を上げるだけで、id を抽出してくれるの�
 
 先ほどは YoutubeId を例に紹介にしました。
 JSON Editor の場合を紹介します。
+
+JSON editor のドキュメントを参考に設定をします。
