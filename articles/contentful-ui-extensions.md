@@ -18,7 +18,7 @@ Contentful の Web アプリの基本機能を拡張させてくれるもので�
 https://www.contentful.com/developers/docs/extensibility/ui-extensions/
 
 例：
-・JSON Editor
+・JSON Form Editor
 JSON をそのまま編集させるのでなく、GUI 的に編集できるものです。
 
 ・Youtube ID
@@ -79,9 +79,10 @@ Github からインストールした場合は、元々記述がありますの�
 
 Youtube の動画の URL を上げるだけで、id を抽出してくれるので、「id ってどれ？」みたいなやりとりも減りそうですね。
 
-### JSON Editor の設定
+### JSON Form Editor の設定
 
 先ほどは YoutubeId を例に紹介にしました。
-JSON Editor の場合を紹介します。
+JSON Form Editor の場合を紹介します。
 
-JSON editor のドキュメントを参考に設定をします。
+JSON Form Editor のドキュメントを参考に設定をします。
+https://github.com/contentful/extensions/tree/master/samples/json-form-editor
