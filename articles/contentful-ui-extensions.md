@@ -38,7 +38,7 @@ Settings をクリックして、Extensions（スクショの赤枠）を押し�
 ここで、Add extension を押すと Github からインストールするか、新しく作成するかを選べるので、必要な方を選びます。（今回は、Github からの方で説明します。）
 ![](https://storage.googleapis.com/zenn-user-upload/b5e5b225928b-20220106.png)
 
-2.Github からの場合、以下のような画面になります。
+Github からの場合、以下のような画面になります。
 ![](https://storage.googleapis.com/zenn-user-upload/6431119ac555-20220107.png)
 
 そこに使いたい extensions の Github の extensions.json の URL を入力する必要があります。
@@ -55,7 +55,7 @@ youtube-id という extensions を入れたいなら、
 入力すると以下のような画面になります。
 ![](https://storage.googleapis.com/zenn-user-upload/28795cc9d6fa-20220107.png)
 
-設定画面の説明
+### 設定画面の説明
 
 FieldTypes はその名の通り、どんなフィールドのタイプにこの Extensions を適用するかです。
 
@@ -86,3 +86,5 @@ JSON Form Editor の場合を紹介します。
 
 JSON Form Editor のドキュメントを参考に設定をします。
 https://github.com/contentful/extensions/tree/master/samples/json-form-editor
+
+#### Code(required)を編集
