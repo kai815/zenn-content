@@ -87,4 +87,16 @@ JSON Form Editor の場合を紹介します。
 JSON Form Editor のドキュメントを参考に設定をします。
 https://github.com/contentful/extensions/tree/master/samples/json-form-editor
 
+schema の定義の仕方は下記のリンクが参考になります。
+https://github.com/jdorn/json-editor#json-schema-support
+
 #### Code(required)を編集
+
+{
+"type": "object",
+"properties": {
+"name": {"type": "string"},
+"age": {"type": "integer"}
+},
+"defaultProperties": ["name"]
+}
