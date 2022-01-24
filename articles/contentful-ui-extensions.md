@@ -100,3 +100,5 @@ https://github.com/jdorn/json-editor#json-schema-support
 },
 "defaultProperties": ["name"]
 }
+
+こんな感じで編集すると以下のようになります。
