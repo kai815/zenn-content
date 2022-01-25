@@ -102,3 +102,8 @@ https://github.com/jdorn/json-editor#json-schema-support
 }
 
 こんな感じで編集すると以下のようになります。
+
+JSON の直接編集するようなフォームだったのが、
+通常のフィールドのようになりました。
+
+### まとめ
