@@ -106,4 +106,6 @@ https://github.com/jdorn/json-editor#json-schema-support
 JSON の直接編集するようなフォームだったのが、
 通常のフィールドのようになりました。
 
+これなら非エンジニアの方でも入力しやすくなるかと思います。
+
 ### まとめ
