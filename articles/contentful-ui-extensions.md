@@ -6,8 +6,7 @@ topics: ["Contentful"]
 published: false
 ---
 
-仕事で Contentful を使っているのですが、Contentful の UI Extensions という機能を初めて使って、
-便利だったのでその紹介です。
+仕事で Contentful を使っているのですが、Contentful の UI Extensions という機能を初めて使って、便利だったのでその紹介です。
 
 ## UI Extensions とは
 
@@ -24,8 +23,8 @@ JSON をそのまま編集させるのでなく、GUI 的に編集できるも�
 ・Youtube ID
 Youtube のリンクを入力すると、id だけを抽出してくれるものです。
 
-Contentful を使うビジネスサイドの非エンジニアの方
-にもよりわかりやすい入力フィールドを作ることも可能です。
+Contentful で記事の投稿なのを行うのはビジネスサイドの方が多いかと思います。
+UI Extensions を使い、そういった非エンジニアのにもよりわかりやすい入力フィールドを作ることも可能です。
 
 ## 設定の仕方
 
@@ -100,6 +99,9 @@ https://github.com/jdorn/json-editor#json-schema-support
 },
 "defaultProperties": ["name"]
 }
+
+元々の JSON のフィールドは以下のスクショのようなものです。
+![](https://storage.googleapis.com/zenn-user-upload/2bee29b373d8-20220127.png)
 
 こんな感じで編集すると以下のようになります。
 
