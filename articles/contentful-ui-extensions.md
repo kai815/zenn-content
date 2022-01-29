@@ -83,22 +83,20 @@ Youtube の動画の URL を上げるだけで、id を抽出してくれるの�
 先ほどは YoutubeId を例に紹介にしました。
 JSON Form Editor の場合を紹介します。
 
-JSON Form Editor のドキュメントを参考に設定をします。
-https://github.com/contentful/extensions/tree/master/samples/json-form-editor
+手順はほとんど同じですが、
+入力する GitHub の URL が以下になります。
+`https://github.com/contentful/extensions/blob/master/samples/json-form-editor/extension.json`
 
-schema の定義の仕方は下記のリンクが参考になります。
-https://github.com/jdorn/json-editor#json-schema-support
+FieldTypes は Object に適用したいので、Object にチェックします。
+![](https://storage.googleapis.com/zenn-user-upload/8a7d0e6d07bb-20220129.png)
 
 #### Code(required)を編集
 
-{
-"type": "object",
-"properties": {
-"name": {"type": "string"},
-"age": {"type": "integer"}
-},
-"defaultProperties": ["name"]
-}
+以下の定義のところを修正します。
+![](https://storage.googleapis.com/zenn-user-upload/ffaa8714b066-20220129.png)
+
+schema の定義の仕方は下記のリンクが参考になります。
+https://github.com/jdorn/json-editor#json-schema-support
 
 元々の JSON のフィールドは以下のスクショのようなものです。
 ![](https://storage.googleapis.com/zenn-user-upload/2bee29b373d8-20220127.png)
