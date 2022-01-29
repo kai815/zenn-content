@@ -92,8 +92,41 @@ FieldTypes は Object に適用したいので、Object にチェックします
 
 #### Code(required)を編集
 
-以下の定義のところを修正します。
-![](https://storage.googleapis.com/zenn-user-upload/ffaa8714b066-20220129.png)
+`window.CONTENTFUL_FORM_EDITOR_SCHEMA`のところを以下のように修正します。
+
+```js
+window.CONTENTFUL_FORM_EDITOR_SCHEMA = {
+  title: "Person",
+  oneOf: [
+    {
+      $ref: "#/definitions/basicperson",
+      title: "Basic Person",
+    },
+  ],
+  definitions: {
+    basicperson: {
+      title: "Person",
+      type: "object",
+      id: "person",
+      properties: {
+        name: {
+          type: "string",
+          description: "First and Last name",
+          minLength: 4,
+          propertyOrder: 10,
+        },
+        age: {
+          type: "integer",
+          default: 21,
+          minimum: 18,
+          maximum: 99,
+          propertyOrder: 20,
+        },
+      },
+    },
+  },
+};
+```
 
 schema の定義の仕方は下記のリンクが参考になります。
 https://github.com/jdorn/json-editor#json-schema-support
