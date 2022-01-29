@@ -2,7 +2,7 @@
 title: "ContentfulのUI Extensionsの紹介"
 emoji: "💭"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["Contentful", "Headless CMS"]
+topics: ["Contentful", "HeadlessCMS"]
 published: true
 ---
 
