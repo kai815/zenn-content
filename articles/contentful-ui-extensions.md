@@ -2,11 +2,11 @@
 title: "ContentfulのUI Extensionsの紹介"
 emoji: "💭"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: ["Contentful"]
-published: false
+topics: ["Contentful", "Headless CMS"]
+published: true
 ---
 
-仕事で Contentful を使っているのですが、Contentful の UI Extensions という機能を初めて使って、便利だったのでその紹介です。
+仕事で Contentful を使っているのですが、UI Extensions という機能を初めて使ってみて、便利だなぁと感じたのでその紹介です。
 
 ## UI Extensions とは
 
@@ -17,11 +17,11 @@ Contentful の Web アプリの基本機能を拡張させてくれるもので�
 https://www.contentful.com/developers/docs/extensibility/ui-extensions/
 
 例：
-・JSON Form Editor
-JSON をそのまま編集させるのでなく、GUI 的に編集できるものです。
-
 ・Youtube ID
 Youtube のリンクを入力すると、id だけを抽出してくれるものです。
+
+・JSON Form Editor
+JSON をそのまま編集させるのでなく、GUI 的に編集できるものです。
 
 Contentful で記事の投稿なのを行うのはビジネスサイドの方が多いかと思います。
 UI Extensions を使い、そういった非エンジニアのにもよりわかりやすい入力フィールドを作ることも可能です。
@@ -43,7 +43,7 @@ Github からの場合、以下のような画面になります。
 そこに使いたい extensions の Github の extensions.json の URL を入力する必要があります。
 
 例えば、
-youtube-id という extensions を入れたいなら、
+Youtube ID という extensions を入れたいなら、
 `https://github.com/contentful/extensions/blob/master/samples/youtube-id/extension.json`
 という URL を入れます。
 
@@ -65,18 +65,18 @@ Hosting も元々チェックされてる Hosted by Contentful (srcdoc)でいい
 もしホスティングを変更したければ、指定してください。
 
 Code(required)に実際にどんな挙動をするかを記述します。
-Github からインストールした場合は、元々記述がありますので、必要に応じて、値を変更します。
-
-元々の入力画面
-![](https://storage.googleapis.com/zenn-user-upload/56e5349bbbe0-20220114.png)
+Github からインストールした場合は、元々記述がありますので、必要に応じて、値を修正します。
 
 フィールド側での設定
 ![](https://storage.googleapis.com/zenn-user-upload/d83c9eca3e42-20220115.png)
 
-実際に設定した画面は以下です。Youtube の動画 URL を貼り付けると、動画の id のみが抽出されてます。
+元々の入力画面は以下のようでした。
+![](https://storage.googleapis.com/zenn-user-upload/56e5349bbbe0-20220114.png)
+
+実際に Youtube ID を設定した画面は以下です。Youtube の動画 URL を貼り付けると、動画の id のみが抽出されてます。
 ![](https://storage.googleapis.com/zenn-user-upload/70a24efd489e-20220116.gif)
 
-Youtube の動画の URL を上げるだけで、id を抽出してくれるので、「id ってどれ？」みたいなやりとりも減りそうですね。
+Youtube の動画の URL を上げるだけで、id を抽出してくれるので、「id って何入れればいいの？」みたいなやりとりも減りそうですね。
 
 ### JSON Form Editor の設定
 
@@ -134,7 +134,8 @@ https://github.com/jdorn/json-editor#json-schema-support
 元々の JSON のフィールドは以下のスクショのようなものです。
 ![](https://storage.googleapis.com/zenn-user-upload/2bee29b373d8-20220127.png)
 
-こんな感じで編集すると以下のようになります。
+JSON Form Editor を適用すると、以下のようになります。
+![](https://storage.googleapis.com/zenn-user-upload/bc80f678731a-20220129.png)
 
 JSON の直接編集するようなフォームだったのが、
 通常のフィールドのようになりました。
@@ -142,3 +143,9 @@ JSON の直接編集するようなフォームだったのが、
 これなら非エンジニアの方でも入力しやすくなるかと思います。
 
 ### まとめ
+
+Contentful の UI Extensions を紹介しましたが、いかがだったでしょうか？
+非エンジニアの方が、コンテンツの更新などで使うことも多いかと思いますが、
+そういった方でも入力しやすいように、フォームを作り替えられるのは便利かと思います。
+
+もし入力フォームをもう少し使いやすくしたいなどあったら、試しに使ってみるのもいいかもしれませんね。
