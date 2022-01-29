@@ -8,6 +8,9 @@ published: true
 
 仕事で Contentful を使っているのですが、UI Extensions という機能を初めて使ってみて、便利だなぁと感じたのでその紹介です。
 
+※Contentful はヘッドレス CMS です。
+https://www.contentful.com/
+
 ## UI Extensions とは
 
 Contentful の Web アプリの基本機能を拡張させてくれるものです。
