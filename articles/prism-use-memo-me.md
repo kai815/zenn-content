@@ -15,3 +15,5 @@ https://www.prisma.io/docs/concepts/components/prisma-schema/relations/referenti
 onDelete: SetNull
 
 Null constraint violation on the fields: (`taskId`)
+
+先に子テーブルから削除
