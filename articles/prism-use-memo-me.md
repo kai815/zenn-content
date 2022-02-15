@@ -17,3 +17,5 @@ onDelete: SetNull
 Null constraint violation on the fields: (`taskId`)
 
 先に子テーブルから削除
+
+すれば大丈夫
