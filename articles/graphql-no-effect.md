@@ -19,3 +19,5 @@ query がわからなかった
 apollo client はいい
 
 キャッシュとか
+
+GraphQL 使うメリットって何だろう
