@@ -3,7 +3,7 @@ title: "NextjsとStorybook"
 emoji: "💭"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Nextjs", "Storybook"]
-published: true
+published: false
 ---
 
 この記事を参考にやってみましたが、上手く行かなかったところがあるので、備忘録がてらに描きます。
