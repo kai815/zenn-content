@@ -1,8 +1,8 @@
 ---
-title: "NextjsとStorybook"
+title: "NextjsとStorybookとvanilla-extract"
 emoji: "💭"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Nextjs", "Storybook"]
+topics: ["Nextjs", "Storybook", "vanilla-extract"]
 published: false
 ---
 
@@ -38,3 +38,25 @@ module.exports = {
   }
 }
 ```
+
+https://vanilla-extract.style/
+
+Next に入れるとき
+https://vanilla-extract.style/documentation/setup/#nextjs
+
+`yarn add @vanilla-extract/css @vanilla-extract/babel-plugin @vanilla-extract/next-plugin`
+
+```next.config.js
+const {
+  createVanillaExtractPlugin
+} = require('@vanilla-extract/next-plugin');
+const withVanillaExtract = createVanillaExtractPlugin();
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
+
+module.exports = withVanillaExtract(nextConfig);
+
+```
+
+https://github.com/seek-oss/vanilla-extract/issues/4#issuecomment-810842869
