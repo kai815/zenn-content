@@ -39,4 +39,35 @@ module.exports = {
 }
 ```
 
+https://github.com/modulz/stitches
+
 https://stitches.dev/blog/using-nextjs-with-stitches
+
+Next のサンプル
+https://github.com/vercel/next.js/tree/canary/examples/with-stitches
+
+インストール
+`yarn add @stitches/react`
+
+```
+import { createStitches } from '@stitches/react';
+
+export const { styled, getCssText } = createStitches({
+  theme: {
+    fonts: {
+      system: 'system-ui',
+    },
+    colors: {
+      hiContrast: 'hsl(206,10%,5%)',
+      loContrast: 'white',
+    },
+    fontSizes: {
+      1: '13px',
+      2: '15px',
+      3: '17px',
+    },
+  },
+});
+```
+
+stitches は意外と入れやすかったかも？
