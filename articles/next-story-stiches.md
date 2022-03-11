@@ -71,3 +71,5 @@ export const { styled, getCssText } = createStitches({
 ```
 
 stitches は意外と入れやすかったかも？
+
+vanila はわからな
