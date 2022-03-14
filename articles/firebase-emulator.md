@@ -35,3 +35,5 @@ https://java.com/ja/download/
 Firestore への接続
 
 https://firebase.google.com/docs/emulator-suite/connect_firestore?hl=ja
+
+export とかもできるよ。
