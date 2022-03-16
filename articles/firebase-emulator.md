@@ -38,4 +38,6 @@ https://firebase.google.com/docs/emulator-suite/connect_firestore?hl=ja
 
 export とかもできるよ。
 
-import とかもできる
+import とかもできる。
+
+これ知らないとデータ一から
