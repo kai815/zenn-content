@@ -7,3 +7,4 @@ published: false
 ---
 
 file 名を tsx じゃなくて ts にしてた
+アホなミス
