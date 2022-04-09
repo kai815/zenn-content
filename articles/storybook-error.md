@@ -10,6 +10,7 @@ Type '(args: PropsType) => boolean' is not assignable to type 'ComponentStory<(p
 Type '(args: PropsType) => boolean' is not assignable to type 'ArgsStoryFn<ReactFramework, PropsType>'.
 Type 'boolean' is not assignable to type 'StoryFnReactReturnType'.
 
+なんでこんな型のエラーが出るんだ
 file 名を tsx じゃなくて ts にしてた
 アホなミス
 
