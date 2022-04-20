@@ -9,3 +9,5 @@ published: false
 勉強したことのメモ用
 
 Supbase とは？
+
+DB 的なことをできる
