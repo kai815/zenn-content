@@ -29,7 +29,7 @@ SendGridの用意してくれた特定のグループのみを配信停止する
 const sgMail = require('@sendgrid/mail')
 sgMail.send({
   //他の設定は割愛してます。
-  mail_settings: {//ここの設定が重要
+  mail_settings: {
     bypass_list_management: {
       enable: true,
     },
