@@ -3,15 +3,16 @@ title: "SendGridでGlobal Unsubscribeでも強制的にメールを送る方法"
 emoji: "📩"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["SendGrid"]
-published: false
+published: true
 ---
 SendGridの持つ機能を使って比較的簡単にメールの配信停止機能を作ることが出来ます。
 メールのグループごとに配信停止をコントロールすることも可能です。
-やり方などは以下のリンクが参考になります。
+やり方などは以下のリンクが参考になります。（今回紹介したいのは、配信停止になっていても強制的に送る方法なので、割愛します。）
 
 * [受信者目線で配信停止を管理しよう！Unsubscribe GroupsとPreference Centerの概要](https://sendgrid.kke.co.jp/blog/?p=10316)
 * [Unsubscribe Groups](https://sendgrid.kke.co.jp/docs/User_Manual_JP/Suppressions/advanced_suppression_manager.html)
 * [Setup Unsubscribe with SendGrid API & Dynamic Templates](https://dgorski.medium.com/setup-unsubscribe-with-sendgrid-api-dynamic-templates-3b942d325d3d)
+
 
 
 ## 配信停止画面
