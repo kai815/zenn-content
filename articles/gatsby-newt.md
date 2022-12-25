@@ -2,11 +2,12 @@
 title: "GastbyとNewtで素振り"
 emoji: "😶"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Gatsby", "HeadlessCMS","Newt","TypeScript]
+topics: ["Gatsby", "HeadlessCMS", "Newt", "TypeScript"]
 published: false
 ---
 
-## Gastbyの環境構築
+## Gastby の環境構築
+
 ```
 npm init gatsby
 ```
@@ -29,11 +30,13 @@ What would you like to name the folder where your site will be created?
 · Add Markdown and MDX support
 ```
 
-## Newtからデータ取得
+## Newt からデータ取得
+
 https://github.com/Newt-Inc/gatsby-source-newt
 
-http://localhost:8000/___graphqlにアクセスすると
-Newtのデータ見れる
+http://localhost:8000/\_\_\_graphql にアクセスすると
+Newt のデータ見れる
 
 ### 環境変数
+
 https://sachips.byeto.jp/misc/gatsby-env-variable.html
