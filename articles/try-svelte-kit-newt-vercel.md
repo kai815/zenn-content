@@ -323,10 +323,14 @@ Default の adaptor で Vercel はサポートされているらしいので、�
 https://kit.svelte.dev/docs/adapters#supported-environments
 https://github.com/sveltejs/kit/tree/master/packages/adapter-vercel
 
+余談ですが、Vercel がこんなコースを出してるのですね。（デプロイの仕方調べてる時に知りました。）
+https://vercel.com/docs/beginner-sveltekit
+
 ## 最後に
 
 いかがだったでしょうか。
 思ったよりも詰まることなく、デプロイまでいけましたね。
 まだ触ったばっかりですが、route のところや,SG の切り替えとかもわかりやすく、
 使いやすいんじゃないかなぁと思いました。
+あとドキュメントも Svelte も SvelteKit もわかりやすい印象でした。
 今後の進化にも期待したいですね。
