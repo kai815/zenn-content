@@ -1,5 +1,5 @@
 ---
-title: "SvelteKit,Newtでブログを作りVercelにデプロイするまで"
+title: "SvelteKit,Newtでブログを作りVercelにデプロイする"
 emoji: "🎃"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Svelte", "SvelteKit", "TypeScript", "Vercel"]
@@ -11,6 +11,8 @@ https://svelte.jp/blog/announcing-sveltekit-1.0
 
 そこで試しに SvelteKit と[Newt](https://www.newt.so/)というヘッドレス CMS で、
 簡単なブログを作り、Vercel にデプロイするまでやってみましたのでそちらについて書いていきたいと思います。
+
+この記事は[Svelte のカレンダー | Advent Calendar 2022](https://qiita.com/advent-calendar/2022/svelte) - Qiita の 25 日目となる投稿です。(ぎりぎり滑り込みました。)
 
 ### 前提
 
