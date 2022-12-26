@@ -2,7 +2,7 @@
 title: "SvelteKit,Newtでブログを作りVercelにデプロイする"
 emoji: "🎃"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Svelte", "SvelteKit", "TypeScript", "Vercel"]
+topics: ["Svelte", "SvelteKit", "TypeScript", "Vercel", "Newt"]
 published: true
 ---
 
@@ -120,6 +120,7 @@ TOKEN = <Newtのトークン>
 APP_UID = <NewtのアプリID>
 ```
 
+TOKEN はスペース設定の API キーのところから見ることができます。
 Newt のスペースなどについては、いかにドキュメントがあります。
 https://www.newt.so/docs/space
 
@@ -302,7 +303,7 @@ https://stackoverflow.com/questions/56607606/styling-a-html-tag-of-a-svelte-comp
 以下のような画面が出れば成功です。
 ![記事詳細](https://storage.googleapis.com/zenn-user-upload/61f511531cf2-20221225.png)
 
-### prerender の違いを試した
+## prerender の違いを試した
 
 先ほど出てきた、`prerender`を試した時の補足です。
 true にして、`npm run build`すると `.svelte-kit/output`の下に HTML が生成されているのがわかります。
@@ -315,8 +316,11 @@ false にすると、`.svelte-kit/output`の下に HTML がないです。
 ## Vercel にデプロイする
 
 Default の adaptor で Vercel はサポートされているらしいので、デプロイのためにやったことはほとんどありませんでした。
-強いていうなら、SPACE_ID などの環境変数のセットくらいです。
 
+プロジェクトを新規作成したら、GitHub から import するだけです。
+![import](https://storage.googleapis.com/zenn-user-upload/2b4f37257cf8-20221226.png)
+
+強いて必要な設定というなら、SPACE_ID などの環境変数のセットくらいです。
 プロジェクトを選択して、Settings→Environment Variables のところでセットできます。
 ![vercel環境変数](https://storage.googleapis.com/zenn-user-upload/c03c21d72aa5-20221225.png)
 
