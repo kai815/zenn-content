@@ -14,6 +14,9 @@ https://svelte.jp/blog/announcing-sveltekit-1.0
 
 この記事は[Svelte Advent Calendar 2022](https://qiita.com/advent-calendar/2022/svelte)の 25 日目となる投稿です。(ぎりぎり滑り込みました。)
 
+サンプルのソースコードは以下です。
+https://github.com/kai815/try-svelte-kit/tree/feature/get-newt-data
+
 ### 前提
 
 Node.js のバージョンは v18.12.1 です。
