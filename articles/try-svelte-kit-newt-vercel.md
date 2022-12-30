@@ -301,7 +301,49 @@ https://svelte.jp/docs#template-syntax-html
 
 最初@html の中の`h2`タグにスタイルが当たらなかったのですが、`:global(h2)`をすることで当たりました。
 https://stackoverflow.com/questions/56607606/styling-a-html-tag-of-a-svelte-component-by-ising-the-in-component-style
+
 ※global となっているので、他のページにも影響あるのか試してみたのですが、他のページには影響なさそうでした。
+::::details global を試した
+
+`src/routes/+page.svelte`を編集しました。
+
+```vue:src/routes/+page.svelte
+<script lang="ts">
+  import type { PageData } from "./$types";
+  export let data: PageData;
++  //試し
++  const test = `<h2>テスト</h2>`
+</script>
+
+<svelte:head>
+  <title>Home</title>
+  <meta name="description" content="Svelte demo app" />
+</svelte:head>
+
+<section>
+  <h1>SevelteKitブログ</h1>
++  {@html test}
+  <ul>
+  {#each data.items as item}
+    <li>
+      <a href="{item._id}">{item.title}</a>
+    </li>
+  {/each}
+  </ul>
+</section>
+
+<style>
+section {
+  display: flex;
+  flex-direction: column;
+}
+</style>
+```
+
+以下のようになります。
+![global](https://storage.googleapis.com/zenn-user-upload/936efc296c64-20221231.png)
+
+::::
 
 以下のような画面が出れば成功です。
 ![記事詳細](https://storage.googleapis.com/zenn-user-upload/61f511531cf2-20221225.png)
