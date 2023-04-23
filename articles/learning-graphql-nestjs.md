@@ -101,7 +101,7 @@ N+1問題に対処するにはDataloaderを用いるなどの方法がある様�
 
 https://engineering.mercari.com/blog/entry/20210818-mercari-shops-nestjs-graphql-server/
 
-## Mongodbとの繋ぎこみ
+## MongoDBとの繋ぎこみ
 
 `@nestjs/mongoose` `mongoose`をインストールします。
 ```
@@ -119,7 +119,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 export class AppModule {}
 ```
 
-photoのmongodb用のスキーマを定義します。
+photoのMongoDB用のスキーマを定義します。
 ```ts:backend-nestjs/src/components/photos/schemas/photo.schema.ts
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
