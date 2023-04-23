@@ -1,13 +1,13 @@
 ---
 title: "「初めてのGraphQL」の内容の実装をNestjsでやってみた"
-emoji: "💭"
+emoji: "♠️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["GraphQL", "Nestjs", "TypeScript"]
-published: false
+published: true
 ---
 
 [「初めてのGraphQL」](https://www.oreilly.co.jp/books/9784873118932/)という書籍を読んだのですが、その中で出てくる、写真投稿アプリ?の実装を Nestjs,TypeScript で実装してみました。
-実装をする際のポイントとなりそうなところをメモ的に書いていきたいと思います。自分と同じように、「初めてのGraphQL」の内容をNestjsでやってみようかなぁと思っている方の参考になれば嬉しいです！
+実装をする際のポイントとなりそうなところをメモ的に書いていきたいと思います。自分と同じように、「初めてのGraphQL」の内容をNestjsでやってみようかなぁと思っている方の参考になれば嬉しいです。
 
 ソースコードはGitHubにあげており、以下のやつのbackend-nestjsのディレクトリです。そちらも参考にしていただけますと、幸いです。
 
@@ -270,5 +270,7 @@ export class UsersResolver {
 
 
 ## 最後に
+
 「初めてのGraphQL」の写真投稿アプリの内容をNestjsで実装する際のポイントを書いてみました。
+また本の内容は、GraphQLの概要をつかむには良かったと思います。
 私自身、GraphQLもNestjsもまだ勉強中の身ですが、この記事が誰かの役に立ったら嬉しいです。
